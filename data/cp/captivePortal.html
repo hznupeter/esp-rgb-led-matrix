@@ -25,7 +25,7 @@
             }
         </style>
 
-        <title>PIXELIX</title>
+        <title>PIXELIX网络时钟</title>
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     </head>
     <body class="d-flex flex-column h-100">
@@ -41,10 +41,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">主页 <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about.html">About</a>
+                            <a class="nav-link" href="/about.html">关于</a>
                         </li>
                     </ul>
                 </div>
@@ -54,19 +54,19 @@
         <!-- Begin page content -->
         <main role="main" class="flex-shrink-0">
             <div class="container">
-                <h1 class="mt-5">Captive Portal</h1>
-                <h2 class="mt-2">Wifi network configuration</h2>
+                <h1 class="mt-5">PIXELIX网络时钟</h1>
+                <h2 class="mt-2">设置网络连接</h2>
                 <p>
                     <label for="ssid">SSID:</label><br />
                     <input type="text" id="ssid" name="ssid" value="~SSID~" /><br />
-                    <label for="passphrase">Passphrase:</label><br />
+                    <label for="passphrase">密码:</label><br />
                     <input type="password" id="passphrase" name="passphrase" value="~PASSPHRASE~" /><br />
-                    <input type="button" value="Store configuration" onclick="store()" />
+                    <input type="button" value="保存设置" onclick="store()" />
                 </p>
-                <p>WiFi MAC address: ~MAC_ADDR~</p>
-                <h2 class="mt-2">Restart</h2>
+                <p>WiFi MAC 地址: ~MAC_ADDR~</p>
+                <h2 class="mt-2">重启</h2>
                 <p>
-                    <input type="button" value="Restart now" onclick="restart()" />
+                    <input type="button" value="立即重启" onclick="restart()" />
                 </p>
             </div>
         </main>

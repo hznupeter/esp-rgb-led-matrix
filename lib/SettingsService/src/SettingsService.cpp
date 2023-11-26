@@ -173,37 +173,37 @@ static const char*  NAME_QUIET_MODE                 = "Quiet mode (skip unnecess
 static const uint32_t   DEFAULT_VERSION                 = 0U; /* 0 is important to detect whether the version is not stored yet. */
 
 /** Wifi network default value */
-static const char*      DEFAULT_WIFI_SSID               = "";
+static const char*      DEFAULT_WIFI_SSID               = "Xiaomi_0432";
 
 /** Wifi network passphrase default value */
-static const char*      DEFAULT_WIFI_PASSPHRASE         = "";
+static const char*      DEFAULT_WIFI_PASSPHRASE         = "18768195210";
 
 /** Wifi access point network default value */
-static const char*      DEFAULT_WIFI_AP_SSID            = "pixelix";
+static const char*      DEFAULT_WIFI_AP_SSID            = "p";
 
 /** Wifi access point network passphrase default value */
-static const char*      DEFAULT_WIFI_AP_PASSPHRASE      = "Luke, I am your father.";
+static const char*      DEFAULT_WIFI_AP_PASSPHRASE      = "12345678";
 
 /** Website login user account default value */
 static const char*      DEFAULT_WEB_LOGIN_USER          = "luke";
 
 /** Website login user password default value */
-static const char*      DEFAULT_WEB_LOGIN_PASSWORD      = "skywalker";
+static const char*      DEFAULT_WEB_LOGIN_PASSWORD      = "12345678";
 
 /** Hostname default value */
 static const char*      DEFAULT_HOSTNAME                = "pixelix";
 
 /** Brightness default value in % */
-static const uint8_t    DEFAULT_BRIGHTNESS              = 20U; /* If powered via USB, keep this at 20% to avoid damage. */
+static const uint8_t    DEFAULT_BRIGHTNESS              = 10U; /* If powered via USB, keep this at 20% to avoid damage. */
 
 /** Automatic brightness control default value */
 static const bool       DEFAULT_AUTO_BRIGHTNESS_CTRL    = false;
 
 /** POSIX timezone string default value */
-static const char*      DEFAULT_TIMEZONE                = "WEST-1DWEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00";
+static const char*      DEFAULT_TIMEZONE                = "CST-8";
 
 /** NTP server default value */
-static const char*      DEFAULT_NTP_SERVER              = "pool.ntp.org";
+static const char*      DEFAULT_NTP_SERVER              = "ntp.aliyun.com";
 
 /** Max. number of display slots default value */
 static const uint8_t    DEFAULT_MAX_SLOTS               = 8U;

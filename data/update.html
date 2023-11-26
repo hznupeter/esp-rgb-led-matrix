@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="/style/sticky-footer-navbar.css" />
         <link rel="stylesheet" type="text/css" href="/style/style.css" />
 
-        <title>PIXELIX</title>
+        <title>PIXELIX网络时钟</title>
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     </head>
     <body class="d-flex flex-column h-100">
@@ -47,27 +47,27 @@
             </div>
             <!-- Main view -->
             <div class="container">
-                <h1 class="mt-5">Update</h1>
+                <h1 class="mt-5">更新系统</h1>
 
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" id="update-tab" data-toggle="tab" role="tab" href="#update"  aria-controls="update" aria-selected="true">Update</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" id="backup-tab" data-toggle="tab" role="tab" href="#backup" aria-controls="backup" aria-selected="false">Backup</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" id="restore-tab" data-toggle="tab" role="tab" href="#restore" aria-controls="restore" aria-selected="false">Restore</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" id="update-tab" data-toggle="tab" role="tab" href="#update"  aria-controls="update" aria-selected="true">更新</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="backup-tab" data-toggle="tab" role="tab" href="#backup" aria-controls="backup" aria-selected="false">备份</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="restore-tab" data-toggle="tab" role="tab" href="#restore" aria-controls="restore" aria-selected="false">还原</a></li>
                 </ul>
 
                 <div class="tab-content" id="myTabContent">
 
                     <div class="tab-pane fade active show" id="update" role="tabpanel" aria-labelledby="update-tab">
                         <br />
-                        <p>Upload <u>~FIRMWARE_FILENAME~</u> file for software update or <u>~FILESYSTEM_FILENAME~</u> for updating the filesystem.</p>
-                        <p>Use multi-select to upload both at once.</p>
+                        <p>上传 <u>~FIRMWARE_FILENAME~</u> 文件，可以更新系统，或者上传 <u>~FILESYSTEM_FILENAME~</u> 来更新文件系统。</p>
+                        <p>可以一次上传多个文件。</p>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="inputFile" multiple="multiple" accept=".bin">
-                                <label class="custom-file-label" for="inputFile">Choose file</label>
+                                <label class="custom-file-label" for="inputFile">选择文件</label>
                             </div>
                             <div class="input-group-append">
-                                <button class="btn btn-light" type="button" onclick="upload();">Upload</button>
+                                <button class="btn btn-light" type="button" onclick="upload();">上传</button>
                             </div>
                         </div>
                         <div class="progress">
@@ -77,20 +77,20 @@
 
                     <div class="tab-pane fade" id="backup" role="tabpanel" aria-labelledby="backup-tab">
                         <br />
-                        <p>Backup the configuration.</p>
-                        <button class="btn btn-light" id="buttonBackup" type="button" onclick="backup();">Save As</button>
+                        <p>备份设置.</p>
+                        <button class="btn btn-light" id="buttonBackup" type="button" onclick="backup();">另存为</button>
                     </div>
 
                     <div class="tab-pane fade" id="restore" role="tabpanel" aria-labelledby="restore-tab">
                         <br />
-                        <p>Restore the configuration.</p>
+                        <p>保存设置</p>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="backupFile" accept=".zip">
-                                <label class="custom-file-label" for="backupFile">Choose backup file</label>
+                                <label class="custom-file-label" for="backupFile">选择备份文件</label>
                             </div>
                             <div class="input-group-append">
-                                <button class="btn btn-light" type="button" onclick="restore();">Restore</button>
+                                <button class="btn btn-light" type="button" onclick="restore();">还原</button>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="/style/sticky-footer-navbar.css" />
         <link rel="stylesheet" type="text/css" href="/style/style.css" />
 
-        <title>PIXELIX</title>
+        <title>PIXELIX网络时钟</title>
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     </head>
     <body class="d-flex flex-column h-100">
@@ -47,33 +47,33 @@
             </div>
             <!-- Main view -->
             <div class="container">
-                <h1 class="mt-5">Display</h1>
-                <p>Slot: <span id="slotId">-</span></p>
+                <h1 class="mt-5">显示设置</h1>
+                <p>画面内容: <span id="slotId">-</span></p>
                 <canvas id="canvas" width="353" height="89" style="border: 1px solid #000000; background-color: black;"></canvas>
-                <p>Note, you can move the plugins with drag'n drop to other slots.</p>
+                <p>提示：你可以将插件拖动到其他画面中。</p>
                 <div id="divSlots">
                 </div>
                 <p style="clear: both;"><br /></p>
                 <ul>
-                    <li>Red shaded: Slot is locked and plugin can not be removed.</li>
-                    <li>Yellow shaded: Slot is sticky. Slot scheduling is stopped.</li>
-                    <li>Red/Yellow shaded: Slot is sticky and locked.</li>
+                    <li>红色阴影: 被锁定的画面，无法移除。</li>
+                    <li>黄色阴影: Slot is sticky. Slot scheduling is stopped.</li>
+                    <li>红色/黄色阴影: Slot is sticky and locked.</li>
                 </ul>
                 <p>
-                    <button class="btn btn-light" type="button" onclick="nextSlot()" disabled>Next slot</button>
+                    <button class="btn btn-light" type="button" onclick="nextSlot()" disabled>下个画面</button>
                 </p>
-                <p>Currently active fade effect: <span id="lableFadeEffect"> Linear</span></p>
-                <p><button class="btn btn-light" type="button" onclick="nextEffect()" disabled>Next fade effect</button></p>
+                <p>当前切换效果: <span id="lableFadeEffect"> 线性</span></p>
+                <p><button class="btn btn-light" type="button" onclick="nextEffect()" disabled>下一个切换效果</button></p>
                 <p>
                     <select id="pluginToInstall" size="1">
                     </select>
                     <br />
-                    <button class="btn btn-light" type="button" onclick="install()" disabled>Install</button>
+                    <button class="btn btn-light" type="button" onclick="install()" disabled>安装</button>
                 </p>
                 <p>
                     <ul class="list-group">
-                        <li class="list-group-item text-dark">Automatic brightness control: <span id="autoBrightnessCtrl">?</span> <button id="bAutoBrightnessCtrl" type="button" onclick="changeAutoBrightnessCtrl()" disabled>?</button></li>
-                        <li class="list-group-item text-dark">Brightness: <span id="brightness">?</span> <input type="range" id="sliderBrightness" min="25" max="255" onchange="changeBrightness()" disabled /></li>
+                        <li class="list-group-item text-dark">自动亮度控制: <span id="autoBrightnessCtrl">?</span> <button id="bAutoBrightnessCtrl" type="button" onclick="changeAutoBrightnessCtrl()" disabled>?</button></li>
+                        <li class="list-group-item text-dark">亮度: <span id="brightness">?</span> <input type="range" id="sliderBrightness" min="25" max="255" onchange="changeBrightness()" disabled /></li>
                     </ul>
                 </p>
             </div>
@@ -93,7 +93,7 @@
         <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
         <!-- Pixelix websocket library -->
         <script type="text/javascript" src="/js/ws.js"></script>
-        <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js"></script>
         <!-- Pixelix menu -->
         <script type="text/javascript" src="/js/menu.js"></script>
         <script type="text/javascript" src="/js/pluginsSubMenu.js"></script>
@@ -196,7 +196,7 @@
                     if ("undefined" !== typeof err) {
                         console.error(err);
                     }
-                    return dialog.showError("<p>Install " + pluginName + " failed.</p>");
+                    return dialog.showError("<p>安装 " + pluginName + " 失败.</p>");
                 }).finally(function() {
                     enableUI();
                 });

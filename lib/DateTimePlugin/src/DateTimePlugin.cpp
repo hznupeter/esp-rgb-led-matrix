@@ -62,7 +62,7 @@
 const char* DateTimePlugin::TOPIC_CONFIG        = "/dateTime";
 
 /* Initialize default time format. */
-const char* DateTimePlugin::TIME_FORMAT_DEFAULT = "%I:%M %p";
+const char* DateTimePlugin::TIME_FORMAT_DEFAULT = "%H:%M:%S";
 
 /* Initialize default date format. */
 const char* DateTimePlugin::DATE_FORMAT_DEFAULT = "%m/%d";
