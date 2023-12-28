@@ -173,37 +173,37 @@ static const char*  NAME_QUIET_MODE                 = "Quiet mode (skip unnecess
 static const uint32_t   DEFAULT_VERSION                 = 0U; /* 0 is important to detect whether the version is not stored yet. */
 
 /** Wifi network default value */
-static const char*      DEFAULT_WIFI_SSID               = "Xiaomi_0432";
+static const char*      DEFAULT_WIFI_SSID               = "";
 
 /** Wifi network passphrase default value */
-static const char*      DEFAULT_WIFI_PASSPHRASE         = "18768195210";
+static const char*      DEFAULT_WIFI_PASSPHRASE         = "";
 
 /** Wifi access point network default value */
-static const char*      DEFAULT_WIFI_AP_SSID            = "p";
+static const char*      DEFAULT_WIFI_AP_SSID            = "pixelix";
 
 /** Wifi access point network passphrase default value */
 static const char*      DEFAULT_WIFI_AP_PASSPHRASE      = "12345678";
 
 /** Website login user account default value */
-static const char*      DEFAULT_WEB_LOGIN_USER          = "luke";
+static const char*      DEFAULT_WEB_LOGIN_USER          = "admin";
 
 /** Website login user password default value */
-static const char*      DEFAULT_WEB_LOGIN_PASSWORD      = "12345678";
+static const char*      DEFAULT_WEB_LOGIN_PASSWORD      = "admin";
 
 /** Hostname default value */
 static const char*      DEFAULT_HOSTNAME                = "pixelix";
 
 /** Brightness default value in % */
-static const uint8_t    DEFAULT_BRIGHTNESS              = 10U; /* If powered via USB, keep this at 20% to avoid damage. */
+static const uint8_t    DEFAULT_BRIGHTNESS              = 25U; /* If powered via USB, keep this at 25% to avoid damage. */
 
 /** Automatic brightness control default value */
 static const bool       DEFAULT_AUTO_BRIGHTNESS_CTRL    = false;
 
 /** POSIX timezone string default value */
-static const char*      DEFAULT_TIMEZONE                = "CST-8";
+static const char*      DEFAULT_TIMEZONE                = "WEST-1DWEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00";
 
 /** NTP server default value */
-static const char*      DEFAULT_NTP_SERVER              = "ntp.aliyun.com";
+static const char*      DEFAULT_NTP_SERVER              = "ntp1.aliyun.com";
 
 /** Max. number of display slots default value */
 static const uint8_t    DEFAULT_MAX_SLOTS               = 8U;
@@ -332,7 +332,7 @@ bool SettingsService::start()
 
 void SettingsService::stop()
 {
-    /* Nothing to do. */
+    LOG_INFO("Settings service stopped.");
 }
 
 void SettingsService::process()
